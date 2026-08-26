@@ -95,11 +95,11 @@ export default function DealersListPage() {
                         <td className="py-3 px-4">
                           <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 text-white flex items-center justify-center font-semibold text-sm">
-                              {getInitials(dealer.user.firstName, dealer.user.lastName)}
+                              {getInitials(dealer.user?.firstName || '', dealer.user?.lastName || '')}
                             </div>
                             <div>
-                              <p className="font-medium">{dealer.user.firstName} {dealer.user.lastName}</p>
-                              <p className="text-sm text-gray-500">{dealer.user.email}</p>
+                              <p className="font-medium">{dealer.user?.firstName} {dealer.user?.lastName}</p>
+                              <p className="text-sm text-gray-500">{dealer.user?.email}</p>
                             </div>
                           </div>
                         </td>
@@ -135,10 +135,10 @@ export default function DealersListPage() {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
                           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 text-white flex items-center justify-center font-semibold text-sm">
-                            {getInitials(dealer.user.firstName, dealer.user.lastName)}
+                            {getInitials(dealer.user?.firstName || '', dealer.user?.lastName || '')}
                           </div>
                           <div>
-                            <p className="font-medium">{dealer.user.firstName} {dealer.user.lastName}</p>
+                            <p className="font-medium">{dealer.user?.firstName} {dealer.user?.lastName}</p>
                             <p className="text-xs text-gray-500">{dealer.businessName}</p>
                           </div>
                         </div>

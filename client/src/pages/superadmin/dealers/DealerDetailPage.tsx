@@ -105,11 +105,11 @@ export default function DealerDetailPage() {
           <CardContent className="space-y-4">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl md:text-2xl flex-shrink-0">
-                {getInitials(dealer.user.firstName, dealer.user.lastName)}
+                {getInitials(dealer.user?.firstName || '', dealer.user?.lastName || '')}
               </div>
               <div className="min-w-0">
-                <h3 className="text-lg md:text-xl font-bold">{dealer.user.firstName} {dealer.user.lastName}</h3>
-                <p className="text-gray-500 truncate">{dealer.user.email}</p>
+                <h3 className="text-lg md:text-xl font-bold">{dealer.user?.firstName} {dealer.user?.lastName}</h3>
+                <p className="text-gray-500 truncate">{dealer.user?.email}</p>
                 <Badge className={statusColors[dealer.status]}>{dealer.status}</Badge>
               </div>
             </div>

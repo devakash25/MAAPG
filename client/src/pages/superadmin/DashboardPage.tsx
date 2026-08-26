@@ -380,9 +380,9 @@ export default function DashboardPage() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm leading-snug">
-                      <span className="font-medium">{booking.user.firstName} {booking.user.lastName}</span>
+                      <span className="font-medium">{booking.user?.firstName} {booking.user?.lastName}</span>
                       {' '}booked{' '}
-                      <span className="font-medium text-sky-500">{booking.property.name}</span>
+                      <span className="font-medium text-sky-500">{booking.property?.name}</span>
                     </p>
                     <p className="text-xs text-muted-foreground mt-0.5">{timeAgo(booking.createdAt)}</p>
                   </div>

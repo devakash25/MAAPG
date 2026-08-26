@@ -184,8 +184,8 @@ export default function AnalyticsPage() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm text-gray-900 truncate">
-                      {booking.user.firstName} {booking.user.lastName} booked{' '}
-                      <span className="font-medium">{booking.property.name}</span>
+                      {booking.user?.firstName} {booking.user?.lastName} booked{' '}
+                      <span className="font-medium">{booking.property?.name}</span>
                     </p>
                     <p className="text-xs text-gray-500">Booking</p>
                   </div>
