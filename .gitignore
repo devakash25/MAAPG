@@ -33,8 +33,5 @@ yarn-error.log*
 # Testing
 coverage/
 
-# Prisma
-server/prisma/migrations/
-
 # Uploads
 server/uploads/

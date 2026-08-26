@@ -29,7 +29,18 @@ const app = express();
 // Security middleware
 app.use(helmet());
 app.use(cors({
-  origin: env.FRONTEND_URL,
+  origin: (origin, callback) => {
+    const allowedOrigins = [
+      env.FRONTEND_URL,
+      'http://localhost:5173',
+      'http://localhost:3000',
+    ];
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(null, true);
+    }
+  },
   credentials: true,
 }));
 
