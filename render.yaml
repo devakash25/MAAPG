@@ -4,8 +4,9 @@ services:
     runtime: node
     region: oregon
     plan: free
-    buildCommand: cd server && npm install && npm run build
-    startCommand: cd server && node dist/server.js
+    rootDir: server
+    buildCommand: npm install && npx tsc && ls -la dist/
+    startCommand: node dist/server.js
     envVars:
       - key: NODE_ENV
         value: production
