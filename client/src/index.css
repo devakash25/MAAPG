@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 215 80% 20%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 199 89% 92%;
+    --secondary-foreground: 215 80% 20%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 199 89% 92%;
+    --accent-foreground: 215 80% 20%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 199 89% 48%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 47% 7%;
+    --foreground: 210 40% 96%;
+    --card: 222 40% 10%;
+    --card-foreground: 210 40% 96%;
+    --popover: 222 40% 10%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 222 47% 7%;
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 222 30% 14%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 222 30% 14%;
+    --accent-foreground: 210 40% 96%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 222 30% 14%;
+    --input: 222 30% 14%;
+    --ring: 199 89% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+  .animate-slide-in-right {
+    animation: slideInRight 0.3s ease-out forwards;
+  }
+  .animate-count-up {
+    animation: countUp 1s ease-out forwards;
+  }
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+  .gradient-primary {
+    background: linear-gradient(135deg, #0f2557 0%, #1a3a6b 100%);
+  }
+  .gradient-sky {
+    background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+  }
+  .gradient-navy {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+  }
+  .gradient-blue {
+    background: linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 100%);
+  }
+  .gradient-green {
+    background: linear-gradient(135deg, #059669 0%, #34d399 100%);
+  }
+  .gradient-purple {
+    background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+  }
+  .gradient-orange {
+    background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  }
+  .gradient-emerald {
+    background: linear-gradient(135deg, #10b981 0%, #6ee7b7 100%);
+  }
+  .gradient-yellow {
+    background: linear-gradient(135deg, #eab308 0%, #fde047 100%);
+  }
+  .gradient-indigo {
+    background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%);
+  }
+  .gradient-red {
+    background: linear-gradient(135deg, #ef4444 0%, #fca5a5 100%);
+  }
+  .sidebar-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .sidebar-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .sidebar-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+  }
+  .sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
